@@ -147,7 +147,7 @@ async def health_check():
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run(app, host="0.0.0.0", port=8020)
+    uvicorn.run(app, host="0.0.0.0", port=8020, timeout_keep_alive=2_592_000)  # ToDo 后台任务型
 
 # Usage example
 # To run the server, use the following command in your terminal:
